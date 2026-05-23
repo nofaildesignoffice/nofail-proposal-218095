@@ -1,0 +1,1474 @@
+<!-- PAGE: Slack 메모 텍스트 내용 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>젤로베베 × 몽젤로 | 베이비부터 키즈까지, 아이의 성장과 함께하는 옷</title>
+  <meta name="description" content="0세부터 초등학생까지, 젤로베베(베이비)와 몽젤로(키즈) 두 브랜드를 하나의 자사몰에서 만나보세요. 순면 소재, KC인증, 무료배송.">
+  <meta name="keywords" content="젤로베베, 몽젤로, 유아의류, 아기옷, 베이비옷, 키즈의류, 아동복 쇼핑몰, 신생아옷">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --text-black: #1A1A1A;
+      --text-dark: #333333;
+      --text-gray: #666666;
+      --text-light: #999999;
+      --text-muted: #BCBCBC;
+      --bg-white: #FFFFFF;
+      --bg-light: #F5F5F5;
+      --bg-dark: #2D2D2D;
+      --bg-black: #1A1A1A;
+      --border-light: #E0E0E0;
+      --border-default: #D0D0D0;
+      --placeholder-bg: #E0E0E0;
+      --placeholder-icon: #BCBCBC;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', sans-serif;
+      color: var(--text-gray);
+      line-height: 1.6;
+      background: var(--bg-white);
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; font-family: inherit; background: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--text-black);
+      color: #FFFFFF;
+      border: 1px solid var(--text-black);
+    }
+    .btn-secondary {
+      background: var(--bg-white);
+      color: var(--text-black);
+      border: 1px solid var(--border-default);
+    }
+
+    .section-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-black);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-gray);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+
+    .img-placeholder {
+      background: var(--placeholder-bg);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .img-placeholder svg {
+      color: var(--placeholder-icon);
+      width: 48px;
+      height: 48px;
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon-box svg {
+      width: 24px;
+      height: 24px;
+      color: var(--text-dark);
+    }
+
+    /* 상단 띠 배너 */
+    .announcement-bar {
+      background: var(--bg-dark);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      position: relative;
+    }
+    .announcement-bar .close-btn {
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.7);
+      padding: 4px;
+    }
+    .announcement-bar .close-btn:hover { color: #FFFFFF; }
+    .announcement-bar svg { width: 16px; height: 16px; }
+
+    /* 헤더 */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    .nav-links > li { position: relative; }
+    .nav-links > li > a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-dark);
+      display: block;
+      padding: 8px 0;
+    }
+    .nav-links > li.active > a { color: var(--text-black); font-weight: 700; }
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 0;
+      min-width: 180px;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+    .nav-links > li:hover .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-dropdown a {
+      display: block;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+    .nav-dropdown a:hover { background: var(--bg-light); color: var(--text-black); }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-actions button {
+      color: var(--text-dark);
+      padding: 8px;
+    }
+    .nav-actions button svg { width: 22px; height: 22px; }
+    .cart-badge {
+      position: relative;
+    }
+    .cart-badge::after {
+      content: '3';
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--text-black);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu-btn { display: none; }
+
+    /* 히어로 슬라이더 */
+    .hero-slider {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+      display: none;
+    }
+    .slide.active { display: block; }
+    .img-placeholder-fullscreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-placeholder-fullscreen svg {
+      width: 64px;
+      height: 64px;
+      color: rgba(255,255,255,0.3);
+    }
+    .slide-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 0 24px;
+    }
+    .slide-sub {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+    .slide-title {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .slide-desc {
+      font-size: 18px;
+      color: rgba(255,255,255,0.8);
+    }
+    .slider-dots {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 2;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transition: background 0.3s;
+    }
+    .dot.active { background: #FFFFFF; }
+    .slider-prev, .slider-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: rgba(255,255,255,0.2);
+      color: #FFFFFF;
+      padding: 16px;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .slider-prev:hover, .slider-next:hover { background: rgba(255,255,255,0.3); }
+    .slider-prev { left: 24px; }
+    .slider-next { right: 24px; }
+    .slider-prev svg, .slider-next svg { width: 24px; height: 24px; }
+
+    /* 섹션 2: 두 브랜드 */
+    .brands-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .brand-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--bg-white);
+    }
+    .brand-card-body {
+      padding: 32px;
+    }
+    .brand-tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .brand-card-desc {
+      font-size: 15px;
+      color: var(--text-gray);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .size-guide-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-light);
+      margin-top: 32px;
+    }
+    .size-guide-link svg { width: 16px; height: 16px; }
+
+    /* 섹션 3: 베스트 */
+    .best-section {
+      padding: 80px 0;
+    }
+    .tab-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 32px;
+      margin-bottom: 40px;
+    }
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-gray);
+      background: var(--bg-light);
+      transition: all 0.2s;
+    }
+    .tab-btn.active {
+      background: var(--text-black);
+      color: #FFFFFF;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .product-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+    .product-card-img {
+      aspect-ratio: 3/4;
+    }
+    .product-card-body {
+      padding: 16px;
+    }
+    .product-brand-tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-black);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .product-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-black);
+      margin-bottom: 8px;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    .product-rating svg { width: 14px; height: 14px; color: var(--text-muted); }
+    .cart-icon-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .cart-icon-btn svg { width: 18px; height: 18px; color: var(--text-dark); }
+
+    /* 섹션 4: 신상품 */
+    .new-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    .new-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--text-black);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* 섹션 5: 리뷰 */
+    .review-section {
+      padding: 80px 0;
+    }
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+    .review-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .review-card-img {
+      aspect-ratio: 1;
+    }
+    .review-card-body {
+      padding: 12px;
+      background: var(--bg-white);
+    }
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 6px;
+    }
+    .review-stars svg { width: 12px; height: 12px; color: var(--text-muted); }
+    .review-text {
+      font-size: 13px;
+      color: var(--text-gray);
+      line-height: 1.5;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .review-product {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+
+    /* 섹션 6: 소재 */
+    .material-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      margin-bottom: 40px;
+    }
+    .material-card {
+      padding: 32px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      text-align: center;
+      background: var(--bg-white);
+    }
+    .material-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .material-icon-wrap svg {
+      width: 28px;
+      height: 28px;
+      color: var(--text-dark);
+    }
+    .material-card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-black);
+      margin-bottom: 8px;
+    }
+    .material-card-desc {
+      font-size: 15px;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+
+    /* 섹션 7: Contact */
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    /* 푸터 */
+    .footer {
+      padding: 60px 0 32px;
+      background: var(--bg-dark);
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .footer-brand-desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+    .footer-col-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      padding: 4px 0;
+    }
+    .footer-col a:hover { color: rgba(255,255,255,0.7); }
+    .footer-info {
+      font-size: 13px;
+      line-height: 1.8;
+      margin-top: 12px;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 플로팅 버튼 */
+    .floating-btns {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 50;
+    }
+    .floating-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--text-black);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s;
+    }
+    .floating-btn:hover { transform: translateY(-2px); }
+    .floating-btn svg { width: 24px; height: 24px; }
+    .kakao-btn { background: #FEE500; color: #000000; }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .nav-links, .nav-actions button:not(.mobile-menu-btn) { display: none; }
+      .mobile-menu-btn { display: block; }
+      
+      .slide-title { font-size: 32px; }
+      .slide-sub { font-size: 14px; }
+      .slide-desc { font-size: 16px; }
+      
+      .section-title { font-size: 28px; }
+      .brands-grid { grid-template-columns: 1fr; gap: 24px; }
+      .product-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px;
+      }
+      .review-grid { 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .material-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 16px; }
+      
+      .tab-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .tab-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 띠 배너 -->
+  <div class="announcement-bar">
+    <span>첫 가입 시 10% 할인 쿠폰 즉시 지급 | 5만 원 이상 무료배송</span>
+    <button class="close-btn" aria-label="닫기">
+      <i data-lucide="x"></i>
+    </button>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="page_01.html" class="nav-logo">JELLO</a>
+        
+        <ul class="nav-links">
+          <li class="active">
+            <a href="page_01.html">젤로베베(BABY)</a>
+            <div class="nav-dropdown">
+              <a href="#baby-top">상의</a>
+              <a href="#baby-bottom">하의</a>
+              <a href="#baby-bodysuit">우주복·바디슈트</a>
+              <a href="#baby-outer">외출복</a>
+              <a href="#baby-sleepwear">잠옷·내의</a>
+              <a href="#baby-acc">악세서리</a>
+            </div>
+          </li>
+          <li>
+            <a href="page_02.html">몽젤로(KIDS)</a>
+            <div class="nav-dropdown">
+              <a href="#kids-top">상의</a>
+              <a href="#kids-bottom">하의</a>
+              <a href="#kids-dress">원피스·세트</a>
+              <a href="#kids-outer">아우터</a>
+              <a href="#kids-sleepwear">잠옷·내의</a>
+              <a href="#kids-acc">악세서리</a>
+            </div>
+          </li>
+          <li><a href="#best">BEST</a></li>
+          <li><a href="#new">NEW</a></li>
+          <li><a href="page_03.html">BRAND STORY</a></li>
+          <li><a href="#review">REVIEW</a></li>
+          <li><a href="#contact">고객센터</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="mobile-menu-btn" aria-label="메뉴">
+            <i data-lucide="menu"></i>
+          </button>
+          <button aria-label="검색">
+            <i data-lucide="search"></i>
+          </button>
+          <button aria-label="마이페이지">
+            <i data-lucide="user"></i>
+          </button>
+          <button class="cart-badge" aria-label="장바구니">
+            <i data-lucide="shopping-bag"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- 섹션 1: 히어로 슬라이더 -->
+    <section class="hero-slider">
+      <div class="slider-track">
+        <!-- 슬라이드 1 -->
+        <div class="slide active">
+          <div class="img-placeholder-fullscreen">
+            <i data-lucide="image"></i>
+          </div>
+          <div class="slide-content">
+            <p class="slide-sub">젤로베베 × 몽젤로, 아이의 성장이 이어지는 곳</p>
+            <h1 class="slide-title">태어나는 순간부터<br>함께하는 옷</h1>
+          </div>
+        </div>
+
+        <!-- 슬라이드 2 -->
+        <div class="slide">
+          <div class="img-placeholder-fullscreen">
+            <i data-lucide="image"></i>
+          </div>
+          <div class="slide-content">
+            <p class="slide-sub">아이가 커도 브랜드를 바꿀 필요 없어요</p>
+            <h1 class="slide-title">베이비에서 키즈까지<br>한 곳에서</h1>
+          </div>
+        </div>
+
+        <!-- 슬라이드 3 -->
+        <div class="slide">
+          <div class="img-placeholder-fullscreen">
+            <i data-lucide="image"></i>
+          </div>
+          <div class="slide-content">
+            <p class="slide-sub">첫 가입 시 10% 할인 쿠폰 즉시 지급</p>
+            <h1 class="slide-title">25 SS 신상품 오픈</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- 도트 네비게이션 -->
+      <div class="slider-dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+
+      <!-- 좌우 버튼 -->
+      <button class="slider-prev" aria-label="이전">
+        <i data-lucide="chevron-left"></i>
+      </button>
+      <button class="slider-next" aria-label="다음">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </section>
+
+    <!-- 섹션 2: 두 브랜드, 하나의 세계관 -->
+    <section class="brands-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">아이는 자라고, 옷은 이어져요</h2>
+          <p class="section-desc mx-auto">0~36개월 젤로베베, 4~8세 몽젤로. 같은 감성, 다른 사이즈.</p>
+        </div>
+
+        <div class="brands-grid">
+          <!-- 젤로베베 카드 -->
+          <div class="brand-card">
+            <div class="img-placeholder" style="aspect-ratio:4/3;">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="brand-card-body">
+              <p class="brand-tag">JELLO BEBE | 0~36개월</p>
+              <p class="brand-card-desc">부드러운 소재, 순한 색감의 베이비웨어</p>
+              <a href="page_02.html" class="btn btn-primary">전체 보기 →</a>
+            </div>
+          </div>
+
+          <!-- 몽젤로 카드 -->
+          <div class="brand-card">
+            <div class="img-placeholder" style="aspect-ratio:4/3;">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="brand-card-body">
+              <p class="brand-tag">MON JELLO | 4~8세</p>
+              <p class="brand-card-desc">활동적이고 감각적인 키즈웨어</p>
+              <a href="page_02.html" class="btn btn-primary">전체 보기 →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#" class="size-guide-link">
+            우리 아이 사이즈가 궁금하다면 → 사이즈 가이드 보기
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 3: 지금 가장 많이 사랑받는 아이템 -->
+    <section class="best-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">지금 가장 많이 사랑받는 아이템</h2>
+          <p class="section-desc mx-auto">엄마들이 직접 골라준 이번 주 베스트</p>
+        </div>
+
+        <div class="tab-buttons">
+          <button class="tab-btn active">전체</button>
+          <button class="tab-btn">젤로베베 BABY</button>
+          <button class="tab-btn">몽젤로 KIDS</button>
+        </div>
+
+        <div class="product-grid">
+          <!-- 상품 카드 1 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">상품명 A</p>
+              <p class="product-price">29,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.8 (124)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 2 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">상품명 B</p>
+              <p class="product-price">34,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.9 (98)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 3 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">상품명 C</p>
+              <p class="product-price">26,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.7 (156)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 4 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">상품명 D</p>
+              <p class="product-price">39,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.8 (87)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 5 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">상품명 E</p>
+              <p class="product-price">32,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.9 (112)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 6 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">상품명 F</p>
+              <p class="product-price">36,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.8 (94)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 7 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">상품명 G</p>
+              <p class="product-price">28,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.7 (143)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 상품 카드 8 -->
+          <div class="product-card">
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">상품명 H</p>
+              <p class="product-price">41,900원</p>
+              <div class="product-rating">
+                <i data-lucide="star"></i>
+                <span>4.9 (76)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#best" class="btn btn-secondary">베스트 더보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 4: 이번 주 새로 들어왔어요 -->
+    <section class="new-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">이번 주 새로 들어왔어요</h2>
+          <p class="section-desc mx-auto">매주 업데이트되는 젤로베베 × 몽젤로 신상품</p>
+        </div>
+
+        <div class="product-grid" style="margin-top:48px; margin-bottom:40px;">
+          <!-- 신상품 카드 1 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">신상품 A</p>
+              <p class="product-price">31,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 2 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">신상품 B</p>
+              <p class="product-price">38,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 3 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">신상품 C</p>
+              <p class="product-price">29,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 4 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">신상품 D</p>
+              <p class="product-price">42,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 5 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">신상품 E</p>
+              <p class="product-price">33,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 6 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">신상품 F</p>
+              <p class="product-price">39,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 7 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">젤로베베</p>
+              <p class="product-name">신상품 G</p>
+              <p class="product-price">27,900원</p>
+            </div>
+          </div>
+
+          <!-- 신상품 카드 8 -->
+          <div class="product-card">
+            <span class="new-badge">NEW</span>
+            <button class="cart-icon-btn" aria-label="장바구니 담기">
+              <i data-lucide="shopping-bag"></i>
+            </button>
+            <div class="img-placeholder product-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand-tag">몽젤로</p>
+              <p class="product-name">신상품 H</p>
+              <p class="product-price">44,900원</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#new" class="btn btn-secondary">신상품 전체 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 5: 입어본 엄마들의 솔직한 이야기 -->
+    <section class="review-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">입어본 엄마들의 솔직한 이야기</h2>
+          <p class="section-desc mx-auto">실제 착용 사진과 함께 남겨주신 생생한 후기</p>
+        </div>
+
+        <div class="review-grid">
+          <!-- 리뷰 카드 1 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 A</p>
+            </div>
+          </div>
+
+          <!-- 리뷰 카드 2 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 B</p>
+            </div>
+          </div>
+
+          <!-- 리뷰 카드 3 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 C</p>
+            </div>
+          </div>
+
+          <!-- 리뷰 카드 4 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 D</p>
+            </div>
+          </div>
+
+          <!-- 리뷰 카드 5 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 E</p>
+            </div>
+          </div>
+
+          <!-- 리뷰 카드 6 -->
+          <div class="review-card">
+            <div class="img-placeholder review-card-img">
+              <i data-lucide="image"></i>
+            </div>
+            <div class="review-card-body">
+              <div class="review-stars">
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+                <i data-lucide="star"></i>
+              </div>
+              <p class="review-text">리뷰 발췌 텍스트 한 줄</p>
+              <p class="review-product">상품명 F</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#review" class="btn btn-secondary">리뷰 전체 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 6: 아이 피부에 닿는 옷, 이렇게 만들어요 -->
+    <section class="material-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">아이 피부에 닿는 옷, 이렇게 만들어요</h2>
+          <p class="section-desc mx-auto">부모의 마음으로, 소재부터 봉제까지 꼼꼼하게</p>
+        </div>
+
+        <div class="material-grid">
+          <!-- 소재 카드 1 -->
+          <div class="material-card">
+            <div class="material-icon-wrap">
+              <i data-lucide="shield"></i>
+            </div>
+            <h3 class="material-card-title">순면·오가닉 코튼 중심 소재</h3>
+            <p class="material-card-desc">아이 피부에 자극 없는 부드러운 원단만 선별해요</p>
+          </div>
+
+          <!-- 소재 카드 2 -->
+          <div class="material-card">
+            <div class="material-icon-wrap">
+              <i data-lucide="check-circle"></i>
+            </div>
+            <h3 class="material-card-title">KC안전인증 완료</h3>
+            <p class="material-card-desc">유아용 섬유제품 안전 기준을 충족한 제품만 판매해요</p>
+          </div>
+
+          <!-- 소재 카드 3 -->
+          <div class="material-card">
+            <div class="material-icon-wrap">
+              <i data-lucide="refresh-cw"></i>
+            </div>
+            <h3 class="material-card-title">세탁해도 형태 유지</h3>
+            <p class="material-card-desc">반복 세탁에도 늘어남·줄어듦 없이 오래 입혀요</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="page_03.html" class="btn btn-secondary">브랜드 스토리 더 알아보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 7: Contact Us -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">궁금한 점이 있으시면 편하게 물어보세요</h2>
+          <p class="section-desc mx-auto">사이즈, 소재, 교환·반품까지 카카오톡으로 빠르게 답변드려요</p>
+          <div style="margin-top:32px;">
+            <a href="#contact" class="btn btn-primary">고객센터 바로가기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">JELLO</p>
+          <p class="footer-brand-desc">젤로베베 × 몽젤로<br>베이비부터 키즈까지</p>
+          <div class="footer-info">
+            상호: (주)아모토리<br>
+            사업자번호: [보완 필요]<br>
+            통신판매업번호: [보완 필요]<br>
+            주소: [보완 필요]<br>
+            고객센터: [보완 필요]<br>
+            이메일: [보완 필요]<br>
+            운영시간: 평일 10:00~17:00 (점심 12:00~13:00)
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">쇼핑</p>
+          <a href="page_02.html">젤로베베(BABY)</a>
+          <a href="page_02.html">몽젤로(KIDS)</a>
+          <a href="#best">BEST</a>
+          <a href="#new">NEW</a>
+        </div>
+        <div>
+          <p class="footer-col-title">정보</p>
+          <a href="page_03.html">BRAND STORY</a>
+          <a href="#review">REVIEW</a>
+          <a href="#contact">고객센터</a>
+        </div>
+        <div>
+          <p class="footer-col-title">고객지원</p>
+          <a href="#contact">FAQ</a>
+          <a href="#contact">1:1 문의</a>
+          <a href="#contact">교환·반품 안내</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 JELLO BEBE. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 플로팅 버튼 -->
+  <div class="floating-btns">
+    <button class="floating-btn kakao-btn" aria-label="카카오톡 상담">
+      <i data-lucide="message-circle"></i>
+    </button>
+    <button class="floating-btn" id="topBtn" aria-label="맨 위로">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // 슬라이더 자동 전환
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      
+      currentSlide = (n + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+
+    // 자동 전환 (4.5초)
+    let autoSlide = setInterval(nextSlide, 4500);
+
+    // 버튼 클릭
+    document.querySelector('.slider-next').addEventListener('click', () => {
+      nextSlide();
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextSlide, 4500);
+    });
+
+    document.querySelector('.slider-prev').addEventListener('click', () => {
+      prevSlide();
+      clearInterval(autoSlide);
+      autoSlide = setInterval(nextSlide, 4500);
+    });
+
+    // 도트 클릭
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        clearInterval(autoSlide);
+        autoSlide = setInterval(nextSlide, 4500);
+      });
+    });
+
+    // 상단 띠 배너 닫기
+    document.querySelector('.announcement-bar .close-btn').addEventListener('click', function() {
+      document.querySelector('.announcement-bar').style.display = 'none';
+    });
+
+    // TOP 버튼
+    const topBtn = document.getElementById('topBtn');
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 탭 전환
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
