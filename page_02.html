@@ -1,0 +1,1275 @@
+<!-- PAGE: 원하시는 주요 메뉴 및 페이지 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>젤로베베(BABY) 0~36개월 | 젤로베베 × 몽젤로 - 베이비·키즈 의류 통합몰</title>
+  <meta name="description" content="0~36개월 아기를 위한 젤로베베 베이비웨어. 순면 소재, KC인증 완료. 상의, 하의, 우주복, 외출복, 잠옷까지 한 곳에서.">
+  <meta name="keywords" content="젤로베베, 신생아옷, 아기옷, 베이비의류, 영유아의류, 아기우주복, 아기바디슈트, 베이비잠옷">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --text-black: #1A1A1A;
+      --text-dark: #333333;
+      --text-gray: #666666;
+      --text-light: #999999;
+      --text-muted: #BCBCBC;
+      --bg-white: #FFFFFF;
+      --bg-light: #F5F5F5;
+      --bg-dark: #2D2D2D;
+      --bg-black: #1A1A1A;
+      --border-light: #E0E0E0;
+      --border-default: #D0D0D0;
+      --placeholder-bg: #E0E0E0;
+      --placeholder-icon: #BCBCBC;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', sans-serif;
+      color: var(--text-gray);
+      line-height: 1.6;
+      background: var(--bg-white);
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; font-family: inherit; background: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 상단 띠 배너 */
+    .announcement-bar {
+      background: var(--bg-black);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      position: relative;
+    }
+    .announcement-bar-close {
+      position: absolute;
+      right: 24px;
+      background: none;
+      color: rgba(255,255,255,0.6);
+      padding: 4px;
+    }
+    .announcement-bar-close:hover { color: #FFFFFF; }
+
+    /* 헤더 */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    .nav-item {
+      position: relative;
+    }
+    .nav-item > a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 24px 0;
+      display: block;
+    }
+    .nav-item.active > a {
+      color: var(--text-black);
+      font-weight: 600;
+    }
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 0;
+      min-width: 160px;
+      box-shadow: var(--shadow-md);
+    }
+    .nav-item:hover .nav-dropdown {
+      display: block;
+    }
+    .nav-dropdown a {
+      display: block;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+    .nav-dropdown a:hover {
+      background: var(--bg-light);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-actions button {
+      padding: 8px;
+      color: var(--text-dark);
+    }
+    .nav-actions svg {
+      width: 22px;
+      height: 22px;
+    }
+    .cart-badge {
+      position: relative;
+    }
+    .cart-badge::after {
+      content: '2';
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--text-black);
+      color: #FFFFFF;
+      font-size: 10px;
+      font-weight: 700;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    /* 섹션 공통 */
+    .section-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-black);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 16px;
+      color: var(--text-gray);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: var(--text-black);
+      color: #FFFFFF;
+      border: 1px solid var(--text-black);
+    }
+    .btn-secondary {
+      background: var(--bg-white);
+      color: var(--text-black);
+      border: 1px solid var(--border-default);
+    }
+
+    .img-placeholder {
+      background: var(--placeholder-bg);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .img-placeholder svg {
+      color: var(--placeholder-icon);
+      width: 48px;
+      height: 48px;
+    }
+
+    /* 섹션 1: 히어로 배너 */
+    .category-hero {
+      background: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .category-hero-bg {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .category-hero-bg svg {
+      width: 80px;
+      height: 80px;
+      color: var(--placeholder-icon);
+    }
+    .category-hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      padding: 0 24px;
+    }
+    .category-hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+    .category-hero p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.8);
+    }
+    .category-tabs {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+      overflow-x: auto;
+    }
+    .category-tabs-inner {
+      display: flex;
+      gap: 8px;
+      padding: 16px 0;
+      min-width: max-content;
+    }
+    .category-tab {
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-gray);
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .category-tab:hover {
+      background: var(--bg-light);
+    }
+    .category-tab.active {
+      background: var(--text-black);
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* 섹션 2: 상품 리스트 */
+    .product-listing {
+      padding: 48px 0 80px;
+    }
+    .listing-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .filter-sidebar {
+      position: sticky;
+      top: 100px;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .filter-group {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .filter-group:first-child {
+      padding-top: 0;
+    }
+    .filter-group:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .filter-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-black);
+      margin-bottom: 12px;
+    }
+    .filter-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .filter-option input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+    .filter-option label {
+      font-size: 14px;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    .listing-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .listing-count {
+      font-size: 15px;
+      color: var(--text-dark);
+    }
+    .listing-count strong {
+      font-weight: 700;
+      color: var(--text-black);
+    }
+    .listing-sort {
+      display: flex;
+      gap: 12px;
+    }
+    .sort-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+      color: var(--text-gray);
+      border-radius: var(--radius-sm);
+      transition: all 0.2s;
+    }
+    .sort-btn:hover {
+      background: var(--bg-light);
+    }
+    .sort-btn.active {
+      color: var(--text-black);
+      font-weight: 600;
+      background: var(--bg-light);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .product-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+    }
+    .product-image {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: var(--text-black);
+      border-radius: var(--radius-sm);
+    }
+    .product-info {
+      padding: 16px 0;
+    }
+    .product-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-black);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .product-price-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .product-price-original {
+      font-size: 14px;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+    .product-price {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      color: var(--text-gray);
+      margin-bottom: 8px;
+    }
+    .product-rating svg {
+      width: 14px;
+      height: 14px;
+      color: var(--text-muted);
+    }
+    .product-colors {
+      display: flex;
+      gap: 6px;
+    }
+    .color-chip {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--border-light);
+    }
+    .color-chip-beige { background: #F5E6D3; }
+    .color-chip-pink { background: #FFD4D4; }
+    .color-chip-gray { background: #D4D4D4; }
+    .load-more {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* 섹션 3: 사이즈 가이드 */
+    .size-guide {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    .size-table {
+      max-width: 720px;
+      margin: 32px auto 0;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .size-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .size-table th {
+      background: var(--bg-light);
+      padding: 16px;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-black);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .size-table td {
+      padding: 16px;
+      font-size: 14px;
+      color: var(--text-dark);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .size-table tr:last-child td {
+      border-bottom: none;
+    }
+    .size-guide-note {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 15px;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+    .kakao-link {
+      color: var(--text-black);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* 섹션 4: 크로스셀링 */
+    .crosssell {
+      padding: 80px 0;
+    }
+    .crosssell-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .crosssell-cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* 섹션 5: Contact CTA */
+    .contact-cta {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+
+    /* 푸터 */
+    .footer {
+      padding: 60px 0 32px;
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-light);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .footer-brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-black);
+      margin-bottom: 12px;
+    }
+    .footer-brand-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .footer-col-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-black);
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px;
+      color: var(--text-light);
+      padding: 4px 0;
+    }
+    .footer-info {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .footer-bottom-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 플로팅 요소 */
+    .floating-menu {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 90;
+    }
+    .floating-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--text-black);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s;
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+    }
+    .floating-btn svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* 반응형 */
+    @media (max-width: 1024px) {
+      .listing-layout {
+        grid-template-columns: 1fr;
+      }
+      .filter-sidebar {
+        position: static;
+        margin-bottom: 32px;
+      }
+      .product-grid,
+      .crosssell-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+        padding: 8px;
+      }
+      .section-title {
+        font-size: 28px;
+      }
+      .category-hero h1 {
+        font-size: 32px;
+      }
+      .category-tabs-inner {
+        padding: 12px 0;
+      }
+      .product-grid,
+      .crosssell-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .filter-sidebar {
+        padding: 16px;
+      }
+      .listing-sort {
+        overflow-x: auto;
+      }
+      .floating-menu {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 띠 배너 -->
+  <div class="announcement-bar">
+    <span>첫 가입 시 10% 할인 쿠폰 즉시 지급 | 5만 원 이상 무료배송</span>
+    <button class="announcement-bar-close" onclick="this.parentElement.style.display='none'">
+      <i data-lucide="x" style="width:16px;height:16px;"></i>
+    </button>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <button class="mobile-menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+        <a href="index.html" class="nav-logo">젤로베베</a>
+        <nav class="nav-links">
+          <div class="nav-item active">
+            <a href="page_02.html">젤로베베(BABY)</a>
+            <div class="nav-dropdown">
+              <a href="page_02.html#category-top">상의</a>
+              <a href="page_02.html#category-bottom">하의</a>
+              <a href="page_02.html#category-bodysuit">우주복·바디슈트</a>
+              <a href="page_02.html#category-outer">외출복</a>
+              <a href="page_02.html#category-sleepwear">잠옷·내의</a>
+              <a href="page_02.html#category-accessory">악세서리</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="page_03.html">몽젤로(KIDS)</a>
+            <div class="nav-dropdown">
+              <a href="page_03.html#category-top">상의</a>
+              <a href="page_03.html#category-bottom">하의</a>
+              <a href="page_03.html#category-dress">원피스·세트</a>
+              <a href="page_03.html#category-outer">아우터</a>
+              <a href="page_03.html#category-sleepwear">잠옷·내의</a>
+              <a href="page_03.html#category-accessory">악세서리</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="index.html#best">BEST</a>
+          </div>
+          <div class="nav-item">
+            <a href="index.html#new">NEW</a>
+          </div>
+          <div class="nav-item">
+            <a href="page_01.html">BRAND STORY</a>
+          </div>
+          <div class="nav-item">
+            <a href="index.html#review">REVIEW</a>
+          </div>
+          <div class="nav-item">
+            <a href="#contact">고객센터</a>
+          </div>
+        </nav>
+        <div class="nav-actions">
+          <button aria-label="검색">
+            <i data-lucide="search"></i>
+          </button>
+          <button aria-label="마이페이지">
+            <i data-lucide="user"></i>
+          </button>
+          <button aria-label="장바구니" class="cart-badge">
+            <i data-lucide="shopping-bag"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 섹션 1: 카테고리 히어로 -->
+    <section class="category-hero">
+      <div class="category-hero-bg">
+        <i data-lucide="image"></i>
+      </div>
+      <div class="category-hero-content">
+        <h1>젤로베베, 아이의 첫 번째 옷장</h1>
+        <p>0~36개월, 부드러운 소재와 순한 색감으로 채운 베이비웨어</p>
+      </div>
+    </section>
+
+    <div class="category-tabs">
+      <div class="container">
+        <div class="category-tabs-inner">
+          <button class="category-tab active">전체</button>
+          <button class="category-tab">상의</button>
+          <button class="category-tab">하의</button>
+          <button class="category-tab">우주복·바디슈트</button>
+          <button class="category-tab">외출복</button>
+          <button class="category-tab">잠옷·내의</button>
+          <button class="category-tab">악세서리</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 2: 상품 리스트 -->
+    <section class="product-listing">
+      <div class="container">
+        <div class="listing-layout">
+          <!-- 필터 사이드바 -->
+          <aside class="filter-sidebar">
+            <div class="filter-group">
+              <p class="filter-title">카테고리</p>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" checked>
+                  <span>전체</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>상의</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>하의</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>우주복·바디슈트</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>외출복</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>잠옷·내의</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>악세서리</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter-group">
+              <p class="filter-title">사이즈</p>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>50</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>60</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>70</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>80</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>90</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox">
+                  <span>100</span>
+                </label>
+              </div>
+            </div>
+          </aside>
+
+          <!-- 상품 그리드 -->
+          <div>
+            <div class="listing-header">
+              <p class="listing-count">전체 <strong>48</strong>개</p>
+              <div class="listing-sort">
+                <button class="sort-btn active">신상품순</button>
+                <button class="sort-btn">인기순</button>
+                <button class="sort-btn">낮은가격순</button>
+                <button class="sort-btn">높은가격순</button>
+                <button class="sort-btn">리뷰많은순</button>
+              </div>
+            </div>
+
+            <div class="product-grid">
+              <!-- 상품 카드 1 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                  <span class="product-badge">NEW</span>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">베이직 면 바디슈트</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price-original">28,000원</span>
+                    <span class="product-price">19,800원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.8 (24)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-pink"></div>
+                    <div class="color-chip color-chip-gray"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 2 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                  <span class="product-badge">BEST</span>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">우주복 긴팔 롬퍼</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">32,000원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.9 (87)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-gray"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 3 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">순면 긴팔 티셔츠</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">16,900원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.7 (52)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-pink"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 4 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                  <span class="product-badge">NEW</span>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">배냇저고리 2종 세트</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price-original">24,000원</span>
+                    <span class="product-price">18,900원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>5.0 (12)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 5 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">기본 레깅스</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">14,900원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.8 (64)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-gray"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 6 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                  <span class="product-badge">BEST</span>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">외출복 세트 (상하의)</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">42,000원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.9 (103)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-pink"></div>
+                    <div class="color-chip color-chip-gray"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 7 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">수면 조끼</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">22,000원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.6 (28)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- 상품 카드 8 -->
+              <a href="#" class="product-card">
+                <div class="product-image">
+                  <div class="img-placeholder" style="aspect-ratio:3/4;">
+                    <i data-lucide="image"></i>
+                  </div>
+                </div>
+                <div class="product-info">
+                  <p class="product-name">턱받이 3종 세트</p>
+                  <div class="product-price-wrap">
+                    <span class="product-price">12,900원</span>
+                  </div>
+                  <div class="product-rating">
+                    <i data-lucide="star"></i>
+                    <span>4.8 (45)</span>
+                  </div>
+                  <div class="product-colors">
+                    <div class="color-chip color-chip-beige"></div>
+                    <div class="color-chip color-chip-pink"></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="load-more">
+              <button class="btn btn-secondary">더보기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 3: 사이즈 가이드 -->
+    <section class="size-guide">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">우리 아이 사이즈, 이렇게 고르세요</h2>
+          <p class="section-desc mx-auto">월령별 권장 사이즈를 참고해 주세요</p>
+        </div>
+        <div class="size-table">
+          <table>
+            <thead>
+              <tr>
+                <th>사이즈</th>
+                <th>권장 월령</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>50호</strong></td>
+                <td>0~3개월 (신생아)</td>
+              </tr>
+              <tr>
+                <td><strong>60호</strong></td>
+                <td>3~6개월</td>
+              </tr>
+              <tr>
+                <td><strong>70호</strong></td>
+                <td>6~12개월</td>
+              </tr>
+              <tr>
+                <td><strong>80호</strong></td>
+                <td>12~18개월</td>
+              </tr>
+              <tr>
+                <td><strong>90호</strong></td>
+                <td>18~24개월</td>
+              </tr>
+              <tr>
+                <td><strong>100호</strong></td>
+                <td>24~36개월</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="size-guide-note">
+          아이마다 체형이 달라요. 사이즈가 고민되시면 <a href="#" class="kakao-link">카카오톡으로 편하게 물어봐 주세요.</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- 섹션 4: 크로스셀링 -->
+    <section class="crosssell">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">아이가 자라면, 몽젤로가 기다려요</h2>
+          <p class="section-desc mx-auto">같은 감성, 다음 사이즈. 젤로베베의 다음 챕터를 만나보세요.</p>
+        </div>
+        <div class="crosssell-grid">
+          <!-- 몽젤로 상품 1 -->
+          <a href="page_03.html" class="product-card">
+            <div class="product-image">
+              <div class="img-placeholder" style="aspect-ratio:3/4;">
+                <i data-lucide="image"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">키즈 기본 맨투맨</p>
+              <div class="product-price-wrap">
+                <span class="product-price">24,900원</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 몽젤로 상품 2 -->
+          <a href="page_03.html" class="product-card">
+            <div class="product-image">
+              <div class="img-placeholder" style="aspect-ratio:3/4;">
+                <i data-lucide="image"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">데님 팬츠</p>
+              <div class="product-price-wrap">
+                <span class="product-price">32,000원</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 몽젤로 상품 3 -->
+          <a href="page_03.html" class="product-card">
+            <div class="product-image">
+              <div class="img-placeholder" style="aspect-ratio:3/4;">
+                <i data-lucide="image"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">후드 집업</p>
+              <div class="product-price-wrap">
+                <span class="product-price">38,000원</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 몽젤로 상품 4 -->
+          <a href="page_03.html" class="product-card">
+            <div class="product-image">
+              <div class="img-placeholder" style="aspect-ratio:3/4;">
+                <i data-lucide="image"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <p class="product-name">원피스 세트</p>
+              <div class="product-price-wrap">
+                <span class="product-price">42,000원</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="crosssell-cta">
+          <a href="page_03.html" class="btn btn-primary">몽젤로(KIDS) 전체 보기 <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 5: Contact CTA -->
+    <section class="contact-cta" id="contact">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">궁금한 점이 있으시면 편하게 물어보세요</h2>
+          <p class="section-desc mx-auto">사이즈, 소재, 교환·반품까지 카카오톡으로 빠르게 답변드려요</p>
+          <div style="margin-top:32px;">
+            <a href="#" class="btn btn-primary">고객센터 바로가기</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand-name">젤로베베 × 몽젤로</p>
+          <p class="footer-brand-desc">베이비·키즈 의류 통합몰</p>
+          <div class="footer-info">
+            상호: (주)아모토리<br>
+            대표: [대표자명]<br>
+            사업자번호: [사업자번호]<br>
+            통신판매업번호: [통신판매업번호]<br>
+            주소: [회사주소]<br>
+            고객센터: [전화번호]<br>
+            이메일: [이메일]<br>
+            운영시간: 평일 10:00~17:00 (점심 12:00~13:00)
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">쇼핑</p>
+          <a href="page_02.html">젤로베베(BABY)</a>
+          <a href="page_03.html">몽젤로(KIDS)</a>
+          <a href="index.html#best">BEST</a>
+          <a href="index.html#new">NEW</a>
+        </div>
+        <div>
+          <p class="footer-col-title">브랜드</p>
+          <a href="page_01.html">BRAND STORY</a>
+          <a href="index.html#review">REVIEW</a>
+          <a href="#contact">고객센터</a>
+        </div>
+        <div>
+          <p class="footer-col-title">소셜</p>
+          <a href="#">Instagram</a>
+          <a href="#">카카오톡 채널</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 JELLO BEBE. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">교환·반품 안내</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 플로팅 메뉴 -->
+  <div class="floating-menu">
+    <a href="#" class="floating-btn" aria-label="카카오톡 상담">
+      <i data-lucide="message-circle"></i>
+    </a>
+    <button class="floating-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">
+      <i data-lucide="arrow-up"></i>
+    </button>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    
+    // 카테고리 탭 전환
+    document.querySelectorAll('.category-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // 정렬 버튼 전환
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
